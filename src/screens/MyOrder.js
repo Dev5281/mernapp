@@ -25,7 +25,7 @@ export default function MyOrder() {
         },
         body: JSON.stringify({
           email: userEmail,
-          order_data: [] // Send empty array to indicate we want to fetch orders
+          order_data: [] 
         })
       });
 
@@ -38,7 +38,7 @@ export default function MyOrder() {
       const data = await response.json();
       console.log('Received data:', data);
 
-      // Find the existing order in the response
+      
       const existingOrder = data.orderData || [];
       console.log('Processed order data:', existingOrder);
 
@@ -96,7 +96,7 @@ export default function MyOrder() {
           <div className="space-y-8">
             {orderData.map((orderGroup, index) => (
               <div key={index} className="bg-white shadow-lg rounded-lg p-6">
-                {/* Order Date Header */}
+                
                 {orderGroup.find(item => item.Order_date) && (
                   <div className="text-xl font-bold text-gray-800 mb-4">
                     {new Date(orderGroup.find(item => item.Order_date).Order_date).toLocaleDateString('en-US', {
@@ -108,7 +108,7 @@ export default function MyOrder() {
                   </div>
                 )}
                 
-                {/* Order Items */}
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {orderGroup.filter(item => !item.Order_date).map((item, itemIndex) => (
                     <div key={itemIndex} className="border rounded-lg p-4 hover:shadow-md transition-shadow">

@@ -36,7 +36,7 @@ export default function Home() {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % 5); // Loop through 5 slides
         }, 3000);
 
-        return () => clearInterval(interval); // Cleanup on unmount
+        return () => clearInterval(interval); 
     }, []);
 
     const images = [

@@ -36,7 +36,7 @@ export default function Navbar() {
     <nav className="bg-white border-gray-200 dark:bg-gray-900 shadow-md">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         
-        {/* Left Section: Logo + Home + My Orders */}
+       
         <div className="flex items-center space-x-4">
           <Link to="/" className="flex items-center space-x-2">
             <img 
@@ -58,7 +58,7 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Right Section: Cart + Logout (pushed to the right) */}
+        
         <div className="ml-auto flex items-center space-x-6">
           {auth ? (
             <>
